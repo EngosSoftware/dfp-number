@@ -1,4 +1,4 @@
-//! # Decimal Floating Point Arithmetic for Rust
+//! # Decimal Floating-Point Arithmetic for Rust
 //!
 //! Based on bindings for **Intel(R) Decimal Floating-Point Math Library v2.3**
 
