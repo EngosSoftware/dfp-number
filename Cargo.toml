@@ -1,10 +1,11 @@
 [package]
 name = "dfp-number"
-version = "0.0.9"
+version = "0.0.10"
 authors = ["Dariusz Depta <depta@engos.de>"]
-description = "Decimal floating point arithmetic for Rust based on bindings for Intel(R) Decimal Floating-Point Math Library v2.3"
+description = "Decimal floating-point arithmetic for Rust"
 documentation = "https://docs.rs/dfp-number"
 repository = "https://github.com/EngosSoftware/dfp-number.git"
+keywords = ["decimal", "floating", "point", "arithmetic"]
 license = "MIT OR Apache-2.0"
 edition = "2021"
 
