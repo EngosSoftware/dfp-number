@@ -5,6 +5,7 @@ use dfp_number_sys::*;
 use std::cmp::Ordering;
 use std::convert::Infallible;
 use std::fmt;
+use std::fmt::{Debug, Display};
 use std::str::FromStr;
 
 #[macro_export]
@@ -14,7 +15,7 @@ macro_rules! decnum {
   }};
 }
 
-/// 128-bit decimal value.
+/// 128-bit decimal floating-point value.
 #[derive(Copy, Clone)]
 pub struct Decimal128(BID128);
 
@@ -25,7 +26,7 @@ impl Default for Decimal128 {
   }
 }
 
-impl fmt::Debug for Decimal128 {
+impl Debug for Decimal128 {
   /// Converts [Decimal128] into string in debug mode.
   fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
     let mut flags = EXE_CLEAR;
@@ -33,7 +34,7 @@ impl fmt::Debug for Decimal128 {
   }
 }
 
-impl fmt::Display for Decimal128 {
+impl Display for Decimal128 {
   /// Converts [Decimal128] into human-readable string.
   fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
     let mut flags = EXE_CLEAR;
