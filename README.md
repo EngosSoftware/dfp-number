@@ -1,4 +1,4 @@
-# Decimal floating point arithmetic for Rust
+# Decimal floating-point arithmetic for Rust
 
 [dfp-number-sys]: https://crates.io/crates/dfp-number-sys
 
