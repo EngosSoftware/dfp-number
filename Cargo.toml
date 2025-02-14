@@ -1,8 +1,8 @@
 [package]
 name = "dfp-number"
-version = "0.0.8"
+version = "0.0.9"
 authors = ["Dariusz Depta <depta@engos.de>"]
-description = "Decimal floating point arithmetic for Rust based on bindings for Intel(R) Decimal Floating-Point Math Library v2.2"
+description = "Decimal floating point arithmetic for Rust based on bindings for Intel(R) Decimal Floating-Point Math Library v2.3"
 documentation = "https://docs.rs/dfp-number"
 repository = "https://github.com/EngosSoftware/dfp-number.git"
 license = "MIT OR Apache-2.0"

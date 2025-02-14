@@ -62,18 +62,12 @@ fn decimal128_new_0012() {
 
 #[test]
 fn decimal128_new_0013() {
-  assert_eq!(
-    "        1.20        ",
-    format!("{:^20.2}", Decimal128::new(12, 1))
-  );
+  assert_eq!("        1.20        ", format!("{:^20.2}", Decimal128::new(12, 1)));
 }
 
 #[test]
 fn decimal128_new_0014() {
-  assert_eq!(
-    "========1.20========",
-    format!("{:=^20.2}", Decimal128::new(12, 1))
-  );
+  assert_eq!("========1.20========", format!("{:=^20.2}", Decimal128::new(12, 1)));
 }
 
 #[test]
@@ -83,18 +77,12 @@ fn decimal128_new_0015() {
 
 #[test]
 fn decimal128_new_0016() {
-  assert_eq!(
-    "0.00000000000000000001",
-    format!("{:G^20}", Decimal128::from("1000.0000000e-23"))
-  );
+  assert_eq!("0.00000000000000000001", format!("{:G^20}", Decimal128::from("1000.0000000e-23")));
 }
 
 #[test]
 fn decimal128_new_0017() {
-  assert_eq!(
-    "-000.00123",
-    format!("{:010}", Decimal128::from("-0.00123"))
-  );
+  assert_eq!("-000.00123", format!("{:010}", Decimal128::from("-0.00123")));
 }
 
 #[test]
@@ -104,10 +92,7 @@ fn decimal128_new_0018() {
 
 #[test]
 fn decimal128_new_0019() {
-  assert_eq!(
-    "              0.0000",
-    format!("{:20.4}", Decimal128::from("1000.0000000e-23"))
-  );
+  assert_eq!("              0.0000", format!("{:20.4}", Decimal128::from("1000.0000000e-23")));
 }
 
 #[test]
@@ -172,8 +157,5 @@ fn decimal128_new_0111() {
 
 #[test]
 fn decimal128_new_0112() {
-  assert_eq!(
-    "       +SNaN        ",
-    format!("{:^20}", Decimal128::from("snan"))
-  );
+  assert_eq!("       +SNaN        ", format!("{:^20}", Decimal128::from("snan")));
 }

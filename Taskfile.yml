@@ -14,6 +14,12 @@ tasks:
     cmds:
       - cmd: cargo bench -q | grep 'test bench_'
 
+  cov:
+    desc: Generates code coverage report
+    cmds:
+      - cmd: cargo llvm-cov --no-cfg-coverage --no-cfg-coverage-nightly --workspace --html
+      - cmd: echo -e "\n\e[1;32mOpen coverage report\x3A\e[0m file:///$(pwd)/target/llvm-cov/html/index.html\n"
+
   clean:
     desc: Cleans all targets
     cmds:
@@ -43,12 +49,13 @@ tasks:
   clippy:
     desc: Runs linter for all targets
     cmds:
-      - cmd: cargo clippy --all-targets
+      - cmd: cargo clippy
+      - cmd: cargo +nightly clippy --all-targets
 
   fmt:
     desc: Runs the code formatter
     cmds:
-      - cmd: cargo fmt
+      - cmd: cargo +nightly fmt
 
   targets:
     desc: Builds release version for multiple targets
